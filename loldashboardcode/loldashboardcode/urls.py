@@ -3,8 +3,13 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
-urlpatterns = patterns((r'^admin/', include(admin.site.urls)),
-    # Examples:
+
+urlpatterns = patterns(
+    '',
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'loldashboardapp.views.index')
+)
+
     # url(r'^$', 'loldashboardcode.views.home', name='home'),
     # url(r'^loldashboardcode/', include('loldashboardcode.foo.urls')),
 
@@ -13,4 +18,4 @@ urlpatterns = patterns((r'^admin/', include(admin.site.urls)),
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-)
+

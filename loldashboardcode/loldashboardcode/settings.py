@@ -1,4 +1,4 @@
-# Django settings for loldashboardcode project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -19,6 +19,13 @@ DATABASES = {
     }
 }
 
+
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_ROOT = os.path.abspath(PROJECT_PATH)
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -105,11 +112,7 @@ ROOT_URLCONF = 'loldashboardcode.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'loldashboardcode.wsgi.application'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -120,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'loldashboardapp',
     'django.contrib.admin',
+    'markdown_deux',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
