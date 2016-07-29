@@ -1,4 +1,3 @@
-{% load url from future %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,23 +18,7 @@
     </head>
     
     <body>
-    <form action="{% url 'results' %}" method="post" accept-charset="utf-8">
-    {% csrf_token %}
-        Enter A:<br>
-        <input type="text" name="a1">
-        <br>
-        Enter B:<br>
-        <input type="text" name="b1">
-        <br>
-        Enter C:<br>
-        <input type="text" name="c1">
-        <input type="submit" name="submit" value="calculate">
-    </form>
-<!--     <div class="container">
-      {% load markdown_deux_tags %}   
-      {% markdown %}
-      {% markdown_cheatsheet %}
-      {% endmarkdown %}
-    </div> -->
+        {{ answer1 }}
+        {{ answer2 }}
     </body>
 </html>

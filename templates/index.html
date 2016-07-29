@@ -1,13 +1,12 @@
-{% load url from future %}
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>Quadratic Calculator</title>
+    <title>Change me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
     <!-- Le styles -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     
@@ -19,23 +18,12 @@
     </head>
     
     <body>
-    <form action="{% url 'results' %}" method="post" accept-charset="utf-8">
-    {% csrf_token %}
-        Enter A:<br>
-        <input type="text" name="a1">
-        <br>
-        Enter B:<br>
-        <input type="text" name="b1">
-        <br>
-        Enter C:<br>
-        <input type="text" name="c1">
-        <input type="submit" name="submit" value="calculate">
-    </form>
-<!--     <div class="container">
+    
+    <div class="container">
       {% load markdown_deux_tags %}   
       {% markdown %}
       {% markdown_cheatsheet %}
       {% endmarkdown %}
-    </div> -->
+    </div> <!-- /container -->
     </body>
 </html>

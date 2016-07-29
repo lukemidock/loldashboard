@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^calculation/results/', 'loldashboardapp.views.quadratic_calculation', name='results'),
     url(r'^$', 'loldashboardapp.views.index')
 )
 
