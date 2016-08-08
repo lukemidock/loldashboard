@@ -1,4 +1,6 @@
 import os
+import dj_database_url
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,10 +14,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'loldashboard',
-        'USER': 'root',
-        'PASSWORD': '3minimes',
+        'USER': 'bdxzfmofrcjluq',
+        'PASSWORD': 'RrtovIcjSoDH4nCFp1qD2GLZu0',
     }
 }
 
@@ -158,3 +160,4 @@ LOGGING = {
         },
     }
 }
+DATABASES['default'] =  dj_database_url.config()
